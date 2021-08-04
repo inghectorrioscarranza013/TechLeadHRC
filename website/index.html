@@ -1,0 +1,138 @@
+
+<html  ng-app="testApp">
+	<head>
+		<title>HRC TEST</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+                <script src="assets/js/angular.min.js"></script>
+                <script src="assets/js/app.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+                                <header id="header" style="background: #881518">
+                                    <h1 style="color:white;"><a href="index.html"> WELCOME </a></h1>
+						
+						
+                                </header>
+                                <div id="main" >
+
+						<!-- Post -->
+                                                <article class="post" ng-controller="instrucciones as a1">
+								<header>
+									<div class="title">
+										<h2>Instuctions</h2>
+										<p> {{ a1.texto }}</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2015-11-01">August 3, 2021</time>
+										<a href="#" class="author"><span class="name">Hector Rios</span><img src="images/YO.png" alt="" /></a>
+									</div>
+								</header>
+                                            </article>
+
+					</div>
+                                        <section>
+								<div class="mini-posts">
+
+									<!-- Mini Post -->
+                                                                        <article class="mini-post" ng-controller="funciones as a2">
+											<header>
+												<h3>STEP 1: Insert a message in the field and click send message button</h3>
+											</header>
+                                                                                    <div class="row gtr-uniform">
+											<div class="col-12 col-12-xsmall">
+                                                                                            <input type="text" ng-model="mensaje" name="mensaje" maxlength="20"  placeholder="Write your message here"  />
+											</div>
+                                                                                        <div class="col-12 col-12-xsmall" style="text-align:center">
+                                                                                            <button class="button small" ng-click="validarMensaje()" >Send Message</button>
+											</div>
+                                                                                    </div>
+										</article>
+
+									<!-- Mini Post -->
+                                                                                    <article class="mini-post" ng-controller="funcionesTabla as a3">
+											<header>
+												<h3>STEP 2: SAVED MESSAGES</h3>
+                                                                                                <H5>Here the messages saved by the API are saved.</H5>
+												
+											</header>
+                                                                                    <div class="col-12 col-12-xlarge">
+                                                                                        <div class="table-wrapper">
+                                                                                            <table id="tabla" class="table table-bordered"> 
+                                                                                                <thead class="alt">
+                                                                                                    <tr>
+                                                                                                        <th>ID</th>
+                                                                                                        <th>MESSAGE</th>
+                                                                                                        <th>DATE RECEIVED</th>
+                                                                                                     </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td>1</td>
+                                                                                                        <td>2</td>
+                                                                                                        <td>3</td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                             </table>
+                                                                                        </div>
+                                                                                        <div class="col-6">
+                                                                                             <button class="button small" ng-click="llenarTabla()" >Refresh Table</button>
+                                                                                        </div>
+                                                                                        
+                                                                                    </div>
+										</article>
+                                                                        
+
+								</div>
+							</section>
+                                
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+                                                            <a href="#" class="logo"><img src="images/logo.png" alt="" width="100" /></a>
+								<header>
+									<h2>HECTOR RIOS CARRANZA </h2>
+									<p>Engineering Tech Lead Challenge</p>
+								</header>
+							</section>
+
+						
+
+						
+
+						<!-- About -->
+							<section class="blurb">
+								<h2>THE RULES</h2>
+								<p>When a message (any text max 20 characters) is submitted it has to pass through the queue then the queue will process the message.  This process includes waiting a random time (5 to 10 seconds) to use the API to write it to the database, if the message includes some letters it has to be discarded (b,c,d,t) at the end send a notification to the client that a message has been processed with an ID.
+The client should use the API to retrieve the messages stored in the database. 
+</p>
+								
+							</section>
+
+                                                        <!-- Footer -->
+							<section id="footer">
+								<p class="copyright">This page was done by Hector Rios Carranza as a Test for Alejandra Orozco from KAST Mexico</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+                   
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
